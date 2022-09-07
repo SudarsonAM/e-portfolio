@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    /*border-style: double;*/
+}
+
+/* Custom properties*/
+
+
+:root{
+    --ff-primary:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --ff-secondary:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    --fw-reg:300;
+    --fw-bold:700;
+    
+    --clr-light: rgba(	255, 255, 255,1);
+    --clr-dark:rgba(139, 0, 0,1);
+
+    --fs-h1:3rem;
+    --fs-h2:2.25rem;
+    --fs-h3:1.25rem;
+    --fs-body:1rem;
+}
+
+/*media query*/
+
+@media(min-width:800px){
+    :root{
+        --fs-h1:4.5rem;
+        --fs-h2:3.75rem;
+        --fs-h3:1.5rem;
+        --fs-body:1.125rem;
+
+    }
+
+}
+
+/* General styles*/
+
+body{
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0 ;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+/*change it to section*/
+section{
+    padding: 5em 2em;
+}
+strong{
+    font-weight: var(--fw-bold);
+}
+div{
+    height: 100vh;
+    align-items: center;
+}
+/*Typography*/
+
+h1,h2,h3{
+    line-height: 1em;
+    margin: 0;
+}
+h1{
+    font-size: var(--fs-h1);
+}
+h2{
+    font-size: var(--fs-h2);
+}
+h3{
+    font-size: var(--fs-h3);
+}
+strong{
+    font-weight: var(--fw-bold);
+}
+
+/*intro*/
+
+.section_title{
+    margin-bottom: .25em;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-reg);
+    font-family: var(--ff-primary);
+}
+.section_subtitle{
+    margin: 0%;
+    font-size: var(--fs-h3);
+}
+
+/*Projects*/
+
+.Project_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.Project_1_written{
+    
+    width: 30em;
+    padding-right: 5 rem;
+    height: 100%;
+}
