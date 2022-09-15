@@ -162,8 +162,8 @@ header{
  .hamburger::before,
  .hamburger::after{
     background:black;
-    width: 2em;
-    height: 4px;
+    width: 1.5rem;
+    height: 3.25px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
     
