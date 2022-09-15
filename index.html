@@ -6,45 +6,127 @@
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <title>Sudarson's Portfolio Website</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <script src="./javascript.js"></script>
+        
     </head>
     <body>
         <header>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="naamam">
-                </span>
+            <button class="nav_toggle" onclick="Toggle()" aria-label="toggle navigation">
+                <span class="hamburger"></span>
             </button>
             <nav class="nav">
                 <ul class="nav_list">
-                    <li class="nav_item"><a href="#home" class="nav_link">Home</a></li>
-                    <li class="nav_item"><a href="#edu" class="nav_link">My Education</a></li>
-                    <li class="nav_item"><a href="#skill" class="nav_link">Skills</a></li>
-                    <li class="nav_item"><a href="#" class="nav_link">About Me</a></li>
+                    <li class="nav_item"><a href="#home" class="nav_link" onclick="ToggleEnd()">Home</a></li>
+                    <li class="nav_item"><a href="#About_Me" class="nav_link" onclick="ToggleEnd()">About Me</a></li>
+                    <li class="nav_item"><a href="#Projects" class="nav_link" onclick="ToggleEnd()">My Projects</a></li>
+                    <li class="nav_item"><a href="#Skill" class="nav_link" onclick="ToggleEnd()">My Skills</a></li>
+                    <li class="nav_item"><a href="#Contact" class="nav_link" onclick="ToggleEnd()">Contact Me</a></li>
                 </ul>
             </nav>
         </header>
             
-        <!--Introduction-->>
+        <!--Introduction-->
 
-        <div class="Intro_bg">
+        <div class="Intro_bg" id="home">
             <section class="Intro">
-                <h1 class="section_title section_title_Intro">Hi,I am <strong>Sudarson</strong></h1>
+                <h1 class="section_title section_title_Intro">Hi,I am <strong class="Name">Sudarson</strong></h1>
                 <p class="section_subtitle section_subtitle_Intro">Software Developer</p>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17FT9UN3TSAPu7cnPRWMUBxVzkj4QswpABg&usqp=CAU" class="Intro_img">
+                <img src="img/Sudarson.jpeg" class="Intro_img">
             </section>
         </div>
 
         <!--About_Me-->
         
-        <div class="About_Me_bg"> 
+        <div class="About_Me_bg" id="About_Me"> 
             <section class="About_Me">
                 <h1 class="section_title section_title_About_Me">ABOUT ME</h1>
                 <p class="section_subtitle section_subtitle_About_Me">
                     I am a Highly organized and detail-oriented person. I am a quick learner and can work well individually and with a team as well. I use a creative approach to solve a problem and can handle multiple tasks.
                 </p>
+                <center><button id="button0" onclick="location.href='./document/Sudarson_Resume.pdf';">View My Resume</button></center>
             </section>
         </div>
 
+        <!--Projects-->
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <center><h1><strong>My Projects</strong></h1></center>
+        <section class="Project_1" id="Projects">
+            <div class="Project_1_written">
+                <h1 class="section_title section_title_Project_1">Face Mask Detector</h1>
+                <p class="section_subtitle_Project_1">
+                    Developed a face mask detector using the Imge processing technique under Deep Learning. It 
+    opens up a realtime camera and recognizes people’s face then classifies people with and 
+    without mask accurately. 
+                </p>
+                <h2 class="Project_1_title_Tools">
+                    Tools
+                </h2>
+                <p class="Project_1_Tools">
+                    Python, OpenCV, PyCharm. 
+                </p>
+            </div>
+            <div class="Project_1_pic">
+                <button id="button1" onclick="up()">&#8593</button>
+                <img src="./img/face_mask_detection/With_Mask.jpeg" id="img">
+                <button id="button2" onclick="up()">&#8595</button>
+            </div> 
+        </section>
+        <section class="Project_2">
+            <div class="Project_2_written">
+                <h1 class="section_title section_title_Project_2"><strong>FAC</strong></h1>
+                <p class="section_subtitle_Project_2">Developed a Mobile Application named FAC (Fight Against COVID-19) which predicts if a person has COVID or not 
+                    based on the inputs of User. It also recommends remedies, shows do’s and don’ts and has an 
+                    In-built live COVID Tracker. 
+                </p>
+                <h2 class="Project_2_title_Tools">
+                    Tools
+                </h2>
+                <p class="Project_2_Tools">
+                    XML, Java, Firebase, Android Studio.
+                </p>
+            </div>
+            <div class="Project_2_pic">
+                <center><button id="button3" onclick="Project2Up()">&#8593</button></center>
+                <img src="./img/fac/fac1.jpeg" id="img2">
+                <center><button id="button4" onclick="Project2Down()">&#8595</button></center>
+            </div> 
+        </section>
+
+
+        <!--skills-->
+
+    <section class="Skills" id="Skill">
+        <h1 class="section_title section_title_Skills">Skills</h1>
+        <div class="Skills_img1">
+            <img class="Skill_img1" src="./img/skills/xml.png">
+            <img class="Skill_img1" src="./img/skills/HTML.png">
+            <img class="Skill_img1" src="./img/skills/css.png">
+            <img class="Skill_img1" src="./img/skills/js.png">
+        </div>
+        <div class="Skills_img2">
+            <img class="Skill_img2" src="./img/skills/java.png">
+            <img class="Skill_img2" src="./img/skills/python.png">
+            <img class="Skill_img2" src="./img/skills/Cprg.jpg">
+            <img class="Skill_img2" src="./img/skills/sql.jpg">
+
+        </div>
+
+    </section>
+   
+    <footer id="Contact">
+        <center><h1 class="section_title">Contact Me On</h1></center>
+        <div class="footer_icons">
+            <a href="https://www.linkedin.com/in/sudarson-a-m-5a29a2241"><i class="fa-brands fa-linkedin"></a></i>
+            <a href="mailto:sudarson.a.m.27@gmail.com?subject=subject&cc=cc@example.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/SudarsonAM?tab=repositories"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
     </body>
 </html>
